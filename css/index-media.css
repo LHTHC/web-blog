@@ -125,3 +125,10 @@
         text-decoration: none;
     }
 }
+
+@media screen and (max-width: 240px) {
+    html,
+    body {
+        min-width: 240px;
+    }
+}
