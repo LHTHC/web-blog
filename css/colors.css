@@ -1,0 +1,20 @@
+:root {
+    --primary-default: #fffd00;
+    --primary-hover: #ffe600;
+    --primary-mute: #fffe8a;
+
+    --secondary-default: #a102ff;
+    --secondary-dark: #61019a;
+    --secondary-darker: #3d0062;
+    --secondary-mute: #d48bff;
+
+    --font-default: #232323;
+    --font-mute: rgba(35, 35, 35, 0.7);
+
+    --system-success: #7cf253;
+    --system-fail: #ff9494;
+
+    --background-default: #e5e5e5;
+
+    --transparent: rgba(255, 255, 255, 0);
+}

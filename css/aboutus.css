@@ -6,7 +6,7 @@ body {
     letter-spacing: -0.02em;
 }
 .main {
-    background-color: #e5e5e5;
+    background-color: var(--background-default);
 }
 .main-wrap {
     max-width: 1303px;
@@ -33,10 +33,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 503px;
-}
-
-.advatages-wrap {
-    background-color: #61019a;
+    background: linear-gradient(
+            360deg,
+            rgba(61, 0, 98, 0.6) 30.87%,
+            rgba(94, 78, 78, 0) 100%
+        ),
+        var(--secondary-dark);
 }
 
 .about-us-advantages {
@@ -72,7 +74,7 @@ body {
 }
 
 .advatages-columns-wrap {
-    background-color: #3d0062;
+    background-color: var(--secondary-darker);
 }
 
 .advantages-columns-section__header {
