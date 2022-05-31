@@ -65,3 +65,18 @@
     color: var(--secondary-default);
     text-decoration: none;
 }
+
+@media screen and (max-width: 1280px) {
+    .header-logo__link {
+        margin-left: 1%;
+    }
+
+    .topnav {
+        justify-content: flex-end;
+        margin-right: 1%;
+    }
+
+    .topnav__link {
+        display: none;
+    }
+}
