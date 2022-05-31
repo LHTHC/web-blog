@@ -75,9 +75,6 @@ body {
     background-color: #3d0062;
 }
 
-.advantages-columns-section {
-}
-
 .advantages-columns-section__header {
     display: flex;
     justify-content: center;
@@ -88,9 +85,9 @@ body {
 
 .advantages-columns {
     display: flex;
+    gap: 45px;
     justify-content: space-between;
     align-items: center;
-    gap: 45px;
 }
 
 .advantages-columns__text {
