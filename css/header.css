@@ -61,6 +61,11 @@
     box-shadow: inset 0px 2px 1px var(--box-shadow-default);
 }
 
+.topnav__searchbar:focus {
+    border: 2px solid var(--primary-default);
+    outline: none;
+}
+
 .topnav__link {
     color: var(--secondary-default);
     text-decoration: none;
