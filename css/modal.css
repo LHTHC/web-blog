@@ -100,9 +100,6 @@ body {
     position: absolute;
     right: 25px;
     bottom: 20px;
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
 }
 
 .form-buttons__button {
@@ -118,4 +115,20 @@ body {
 
 .btn-primary {
     background-color: var(--primary-default);
+}
+
+@media screen and (max-width: 970px) {
+    .form {
+        min-width: 400px;
+        margin: 0 2%;
+    }
+
+    .form-buttons {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .input-file::file-selector-button {
+        margin: 0 5px 0 0;
+    }
 }

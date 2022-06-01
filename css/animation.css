@@ -1,0 +1,5 @@
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transition-timing-function: ease-in;
+    transition-duration: 300ms;
+}
