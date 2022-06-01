@@ -9,10 +9,11 @@
     --secondary-mute: #d48bff;
 
     --font-default: #232323;
-    --font-mute: rgba(35, 35, 35, 0.7);
+    --font-mute: rgba(36, 36, 36, 0.7);
 
     --system-success: #7cf253;
     --system-fail: #ff9494;
+    --system-gray: #cecece;
 
     --background-default: #e5e5e5;
 
