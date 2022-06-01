@@ -42,6 +42,7 @@ body {
 }
 
 .card-image_active {
+    position: relative;
     height: 62%;
     margin: 0;
 }
@@ -54,21 +55,16 @@ body {
 }
 
 .card-image-overlay_active {
-    position: absolute;
-    width: 100%;
-    height: 62%;
     background: linear-gradient(360deg, white 4%, var(--transparent) 25%);
 }
 
 .card-image_small {
+    position: relative;
     height: 42%;
     margin: 0;
 }
 
 .card-image__overlay_small {
-    position: absolute;
-    width: 100%;
-    height: 42%;
     background: linear-gradient(360deg, white 4%, var(--transparent) 30%);
 }
 
@@ -166,21 +162,26 @@ body {
 }
 
 .card-image_medium {
+    position: relative;
     width: 45%;
     height: 100%;
     margin: 0;
 }
-.card-image__overlay_medium {
+
+.card-image__overlay {
     position: absolute;
-    width: 45%;
+    width: 100%;
     height: 100%;
+}
+
+.card-image__overlay_medium {
     background: linear-gradient(90deg, var(--transparent) 80%, white 100%);
 }
+
 .card-image__img_medium {
-    height: 100%;
-    margin: 0;
     border-radius: 6px 0 0 6px;
 }
+
 .card-article_medium {
     flex-grow: 1;
     width: 50%;
