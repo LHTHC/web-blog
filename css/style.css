@@ -145,8 +145,20 @@ body {
     color: var(--system-success);
 }
 
+.counter__plus:hover {
+    background-color: var(--system-success);
+    color: var(--font-default);
+    cursor: pointer;
+}
+
 .counter__minus {
     color: var(--system-fail);
+}
+
+.counter__minus:hover {
+    background-color: var(--system-fail);
+    color: var(--font-default);
+    cursor: pointer;
 }
 
 .secondary-articles {
@@ -218,6 +230,10 @@ body {
     color: #232323;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
 }
 
 .upwards-button {
