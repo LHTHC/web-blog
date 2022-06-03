@@ -43,7 +43,7 @@ body {
 }
 
 .about-us-advantages__image {
-    min-width: 376px;
+    width: 376px;
     height: 376px;
     margin-right: 60px;
 }
@@ -88,10 +88,10 @@ body {
 
 .advantages-columns {
     display: flex;
-    gap: 30px;
-    justify-content: space-around;
+    gap: 45px;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 70px;
 }
 
 .advantages-columns__text {
