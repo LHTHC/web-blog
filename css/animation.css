@@ -1,12 +1,17 @@
+.btn-primary,
+.btn,
+.input-file::file-selector-button,
+.counter__plus,
+.counter__minus {
+    cursor: pointer;
+    transition: 300ms;
+}
+
 .btn-primary:hover,
 .input-file::file-selector-button:hover {
     background-color: var(--primary-hover);
-    transition-timing-function: ease-in;
-    transition-duration: 300ms;
 }
 
 .close-button:hover {
     background-color: var(--system-fail);
-    transition-timing-function: ease-in;
-    transition-duration: 100ms;
 }

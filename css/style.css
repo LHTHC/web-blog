@@ -131,13 +131,13 @@ body {
     width: 25px;
     height: 25px;
     border: none;
-    border-radius: 19px;
+    border-radius: 50%;
     background: white;
     box-shadow: 0px 1px 2px var(--box-shadow-default);
     font-weight: 700;
     font-size: 18px;
     font-family: 'Droid Sans', sans-serif;
-    line-height: 20px;
+    line-height: 25px;
     text-align: center;
 }
 
@@ -230,10 +230,6 @@ body {
     color: #232323;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-}
-
-.btn {
-    cursor: pointer;
 }
 
 .upwards-button {
