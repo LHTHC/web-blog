@@ -1,113 +1,10 @@
-.header {
-  box-sizing: border-box;
-  height: 96px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.header-logo-wrap {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  background-color: #fffd00;
-}
-
-.header-logo {
-  max-width: 1185px;
-  height: 48px;
-  margin: 0 auto;
-}
-.header-logo__link {
-  display: inline-block;
-  margin: 0;
-  padding: 12px 0;
-  color: #232323;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.header-main-wrap {
-  max-width: 1185px;
-  height: 48px;
-  margin: 0 auto;
-}
-
-.header-main {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  margin: 5px 0;
-  margin-left: auto;
-}
-.topnav__searchbar {
-  box-sizing: border-box;
-  width: 325px;
-  height: 38px;
-  padding-left: 50px;
-  border: none;
-  border-radius: 29px;
-  background: url("../imgs/search.svg") no-repeat 10px;
-  box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.25);
-}
-.topnav__searchbar:focus {
-  border: 2px solid #fffd00;
-  outline: none;
-}
-.topnav__link {
-  color: #a102ff;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 1280px) {
-  .header-logo__link {
-    margin-left: 1%;
-  }
-
-  .topnav {
-    justify-content: flex-end;
-    margin-right: 1%;
-  }
-
-  .topnav__link {
-    display: none;
-  }
-}
-@font-face {
-  font-weight: 400;
-  font-family: "Roboto";
-  src: url(/src/fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-weight: 700;
-  font-family: "Roboto";
-  src: url(/src/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-weight: 400;
-  font-family: "Droid Sans";
-  src: url(/src/fonts/DroidSans.ttf);
-}
-@font-face {
-  font-weight: 700;
-  font-family: "Droid Sans";
-  src: url(/src/fonts/DroidSans-Bold.ttf);
-}
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
 /* Sections
@@ -131,8 +28,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -142,12 +39,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */
+  box-sizing: content-box;
+  height: 0;
 }
 
 /**
@@ -155,10 +49,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace;
 }
 
 /* Text-level semantics
@@ -176,12 +68,9 @@ a {
  */
 abbr[title] {
   border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  /* 2 */
+  text-decoration: underline;
 }
 
 /**
@@ -199,10 +88,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace;
 }
 
 /**
@@ -218,10 +105,10 @@ small {
  */
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
 
 sub {
@@ -252,14 +139,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
+  font-size: 100%;
+  font-family: inherit;
+  line-height: 1.15;
 }
 
 /**
@@ -268,7 +151,6 @@ textarea {
  */
 button,
 input {
-  /* 1 */
   overflow: visible;
 }
 
@@ -278,7 +160,6 @@ input {
  */
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
@@ -299,8 +180,8 @@ button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /**
@@ -327,18 +208,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
+  box-sizing: border-box;
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
+  color: inherit;
   white-space: normal;
-  /* 1 */
 }
 
 /**
@@ -380,10 +255,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield;
 }
 
 /**
@@ -398,10 +271,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
+  -webkit-appearance: button;
 }
 
 /* Interactive
@@ -442,12 +313,31 @@ body {
   letter-spacing: -0.02em;
 }
 
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  src: url(/src/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  src: url(/src/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-weight: 400;
+  font-family: "Droid Sans";
+  src: url(/src/fonts/DroidSans.ttf);
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Droid Sans";
+  src: url(/src/fonts/DroidSans-Bold.ttf);
+}
 .input-file::-webkit-file-upload-button {
   cursor: pointer;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-
 .btn-primary,
 .btn,
 .input-file::file-selector-button,
@@ -477,8 +367,8 @@ body {
 }
 
 .main {
-  color: #ffffff;
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .main-wrap {
@@ -572,4 +462,86 @@ body {
 .advantages-columns__text {
   flex-basis: 330px;
   min-width: 240px;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 96px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.header-logo-wrap {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: #fffd00;
+}
+
+.header-logo {
+  max-width: 1185px;
+  height: 48px;
+  margin: 0 auto;
+}
+.header-logo__link {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 0;
+  color: #232323;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-main-wrap {
+  max-width: 1185px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.header-main {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 5px 0;
+  margin-left: auto;
+}
+.topnav__searchbar {
+  box-sizing: border-box;
+  width: 325px;
+  height: 38px;
+  padding-left: 50px;
+  border: none;
+  border-radius: 29px;
+  background: url("/src/imgs/search.svg") no-repeat 10px;
+  box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.25);
+}
+.topnav__searchbar:focus {
+  border: 2px solid #fffd00;
+  outline: none;
+}
+.topnav__link {
+  color: #a102ff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .header-logo__link {
+    margin-left: 1%;
+  }
+
+  .topnav {
+    justify-content: flex-end;
+    margin-right: 1%;
+  }
+
+  .topnav__link {
+    display: none;
+  }
 }/*# sourceMappingURL=aboutus.css.map */

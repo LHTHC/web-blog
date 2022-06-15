@@ -1,6 +1,6 @@
 @mixin main-defaults($color, $background) {
-    color: $color;
     background-color: $background;
+    color: $color;
 }
 
 @mixin main-wrap-defaults($max-width: 1185px) {
