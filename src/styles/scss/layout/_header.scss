@@ -54,7 +54,7 @@
         padding-left: 50px;
         border: none;
         border-radius: 29px;
-        background: url('../imgs/search.svg') no-repeat 10px;
+        background: url('/src/imgs/search.svg') no-repeat 10px;
         box-shadow: inset 0px 2px 1px $box-shadow-default;
         &:focus {
             border: 2px solid $primary-default;
