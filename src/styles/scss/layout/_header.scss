@@ -1,83 +1,83 @@
 @use '../abstracts/colors' as *;
 
 .header {
-    box-sizing: border-box;
-    height: 96px;
-    border-bottom: 1px solid $box-shadow-default;
+  box-sizing: border-box;
+  height: 96px;
+  border-bottom: 1px solid $box-shadow-default;
 }
 
 .header-logo-wrap {
-    border-bottom: 1px solid $box-shadow-default;
-    background-color: $primary-default;
+  border-bottom: 1px solid $box-shadow-default;
+  background-color: $primary-default;
 }
 
 .header-logo {
-    max-width: 1185px;
-    height: 48px;
-    margin: 0 auto;
-    &__link {
-        display: inline-block;
-        margin: 0;
-        padding: 12px 0;
-        color: $font-default;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: -0.02em;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
+  max-width: 1185px;
+  height: 48px;
+  margin: 0 auto;
+  &__link {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 0;
+    color: $font-default;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
 
 .header-main-wrap {
-    max-width: 1185px;
-    height: 48px;
-    margin: 0 auto;
+  max-width: 1185px;
+  height: 48px;
+  margin: 0 auto;
 }
 
 .header-main {
-    font-size: 14px;
-    line-height: 16px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .topnav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    margin: 5px 0;
-    margin-left: auto;
-    &__searchbar {
-        box-sizing: border-box;
-        width: 325px;
-        height: 38px;
-        padding-left: 50px;
-        border: none;
-        border-radius: 29px;
-        background: url('../../imgs/search.svg') no-repeat 10px;
-        box-shadow: inset 0px 2px 1px $box-shadow-default;
-        &:focus {
-            border: 2px solid $primary-default;
-            outline: none;
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 5px 0;
+  margin-left: auto;
+  &__searchbar {
+    box-sizing: border-box;
+    width: 325px;
+    height: 38px;
+    padding-left: 50px;
+    border: none;
+    border-radius: 29px;
+    background: url('../../imgs/search.svg') no-repeat 10px;
+    box-shadow: inset 0px 2px 1px $box-shadow-default;
+    &:focus {
+      border: 2px solid $primary-default;
+      outline: none;
     }
-    &__link {
-        color: $secondary-default;
-        text-decoration: none;
-    }
+  }
+  &__link {
+    color: $secondary-default;
+    text-decoration: none;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-    .header-logo__link {
-        margin-left: 1%;
-    }
+  .header-logo__link {
+    margin-left: 1%;
+  }
 
-    .topnav {
-        justify-content: flex-end;
-        margin-right: 1%;
-    }
+  .topnav {
+    justify-content: flex-end;
+    margin-right: 1%;
+  }
 
-    .topnav__link {
-        display: none;
-    }
+  .topnav__link {
+    display: none;
+  }
 }

@@ -3,336 +3,80 @@
 @use '../components';
 
 .main {
-    @include main-defaults($font-default, $background-default);
+  @include main-defaults($font-default, $background-default);
 }
 
 .main-wrap {
-    @include main-wrap-defaults;
+  @include main-wrap-defaults;
 }
 
 .main-articles {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    &__card {
-        position: relative;
-        &_active {
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &_small {
-            height: 300px;
-        }
-    }
-}
-
-.card-image {
-    &__img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 6px 6px 0 0;
-        &_medium {
-            border-radius: 6px 0 0 6px;
-        }
-    }
-    &_active {
-        position: relative;
-        height: 62%;
-        margin: 0;
-    }
-    &_medium {
-        position: relative;
-        width: 45%;
-        height: 100%;
-        margin: 0;
-    }
-    &_small {
-        position: relative;
-        height: 42%;
-        margin: 0;
-    }
-    &__overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        &_active {
-            background: linear-gradient(360deg, white 4%, $transparent 25%);
-        }
-        &_small {
-            background: linear-gradient(360deg, white 4%, $transparent 30%);
-        }
-        &_medium {
-            background: linear-gradient(90deg, $transparent 80%, white 100%);
-        }
-    }
-}
-
-.card-article {
-    padding: 0 15px;
-    &__title {
-        margin: 0;
-        font-size: 20px;
-        line-height: 23px;
-        &_medium {
-            margin: 0;
-            font-size: 34px;
-            line-height: 45px;
-        }
-        &_active {
-            font-size: 34px;
-            line-height: 45px;
-        }
-    }
-    &__text {
-        &_active {
-            display: -webkit-box;
-            overflow: hidden;
-            margin: 0;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-        }
-        &_medium {
-            display: -webkit-box;
-            overflow: hidden;
-            margin: 0;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 8;
-            -webkit-box-orient: vertical;
-        }
-        &_small {
-            display: -webkit-box;
-            overflow: hidden;
-            margin: 0;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-    }
-    &__link {
-        display: block;
-        margin-top: 10px;
-        color: $secondary-default;
-        font-size: 14px;
-        text-decoration: none;
-    }
-    &_medium {
-        flex-grow: 1;
-        width: 50%;
-        margin-top: 15px;
-    }
-}
-
-.counter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 110px;
-    margin: 20px 0 0 auto;
-    color: $system-success;
-    font-size: 20px;
-    &__count {
-        font-weight: bolder;
-        font-size: 30px;
-        line-height: 35px;
-    }
-    &__btn {
-        width: 25px;
-        height: 25px;
-        border: none;
-        border-radius: 50%;
-        background: white;
-        color: $system-success;
-        box-shadow: 0px 1px 2px $box-shadow-default;
-        font-weight: 700;
-        font-size: 18px;
-        font-family: 'Droid Sans', sans-serif;
-        line-height: 25px;
-        text-align: center;
-    }
-    &__plus {
-        &:hover {
-            background-color: $system-success;
-            color: $font-default;
-            cursor: pointer;
-        }
-    }
-    &__minus {
-        color: $system-fail;
-        &:hover {
-            background-color: $system-fail;
-            color: $font-default;
-            cursor: pointer;
-        }
-    }
-}
-
-.secondary-articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 15px;
-    &__card {
-        display: flex;
-        height: 300px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
 
 .more-articles {
+  display: block;
+  width: 132px;
+  height: 38px;
+  margin: 30px auto;
+  border: none;
+  border-radius: 19px;
+  background-color: $primary-default;
+  &__link {
     display: block;
-    width: 132px;
-    height: 38px;
-    margin: 30px auto;
-    border: none;
-    border-radius: 19px;
-    background-color: $primary-default;
-    &__link {
-        display: block;
-        margin: auto;
-        color: #232323;
-        font-family: 'Roboto', sans-serif;
-        text-decoration: none;
-    }
+    margin: auto;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+  }
 }
 
 .upwards-button {
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    width: 160px;
-    height: 52px;
-    padding: 11px;
-    border: none;
-    border-radius: 19px;
-    background-color: white;
-    box-shadow: 0px 1px 2px $box-shadow-default;
-    &__link {
-        color: $font-default;
-        text-decoration: none;
-    }
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  width: 160px;
+  height: 52px;
+  padding: 11px;
+  border: none;
+  border-radius: 19px;
+  background-color: white;
+  box-shadow: 0px 1px 2px $box-shadow-default;
+  &__link {
+    color: $font-default;
+    text-decoration: none;
+  }
 }
 
 //media-queries
 
 @media screen and (max-width: 1280px) {
-    .main-articles,
-    .secondary-articles {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card {
-        display: flex;
-        align-self: center;
-        width: 98%;
-        height: 300px;
-    }
-
-    .card-image {
-        width: 40%;
-        height: 100%;
-        margin: 0;
-        &__overlay {
-            position: absolute;
-            border-radius: 6px;
-            background: linear-gradient(90deg, $transparent 80%, $white 100%);
-        }
-        &__img {
-            border-radius: 6px;
-        }
-    }
-
-    .card-article {
-        flex-grow: 1;
-        width: 50%;
-        margin: 15px 30px 0 20px;
-        padding: 0;
-        &__text {
-            display: -webkit-box;
-            overflow: hidden;
-            max-width: 615px;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-        }
-        &__title {
-            font-size: 34px;
-            line-height: 45px;
-        }
-    }
-
-    .counter {
-        margin-top: 60px;
-    }
+  .main-articles {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 560px) {
-    .main-wrap {
-        max-width: 1185px;
-        margin: 0 auto;
-        padding: 15px 0px 20px;
-    }
+  .main-wrap {
+    padding: 15px 0px 20px;
+  }
 
-    .main-articles,
-    .secondary-articles {
-        display: flex;
-        flex-direction: column;
-    }
+  .main-articles {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        width: 98%;
-        height: 300px;
-    }
+  .upwards-button {
+    width: 100px;
+  }
 
-    .card-image {
-        width: 100%;
-        height: 42%;
-        margin: 0;
-        &__overlay {
-            background: linear-gradient(360deg, #ffffff 4%, $transparent 30%);
-        }
-        &__img {
-            border-radius: 6px;
-        }
-    }
-
-    .card-article {
-        width: 90%;
-        padding: 0;
-        &__text {
-            display: -webkit-box;
-            overflow: hidden;
-            max-width: 615px;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-        &__title {
-            font-size: 20px;
-            line-height: 45px;
-        }
-    }
-
-    .counter {
-        display: none;
-    }
-
-    .upwards-button {
-        width: 100px;
-        &__link {
-            text-decoration: none;
-        }
-    }
-}
-
-@media screen and (max-width: 240px) {
+  @media screen and (max-width: 240px) {
     html,
     body {
-        min-width: 240px;
+      min-width: 240px;
     }
+  }
 }
