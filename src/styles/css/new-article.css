@@ -69,7 +69,7 @@ a {
 abbr[title] {
   border-bottom: none;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   text-decoration: underline;
 }
 
@@ -167,9 +167,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -177,9 +177,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -188,9 +188,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -234,8 +234,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type='checkbox'],
-[type='radio'] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -245,8 +245,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -254,7 +254,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type='search'] {
+[type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
 }
@@ -262,7 +262,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type='search']::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -309,28 +309,28 @@ template {
 
 body {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: -0.02em;
 }
 
 @font-face {
   font-weight: 400;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url(/src/fonts/Roboto-Regular.ttf);
 }
 @font-face {
   font-weight: 700;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url(/src/fonts/Roboto-Bold.ttf);
 }
 @font-face {
   font-weight: 400;
-  font-family: 'Droid Sans';
+  font-family: "Droid Sans";
   src: url(/src/fonts/DroidSans.ttf);
 }
 @font-face {
   font-weight: 700;
-  font-family: 'Droid Sans';
+  font-family: "Droid Sans";
   src: url(/src/fonts/DroidSans-Bold.ttf);
 }
 .input-file::-webkit-file-upload-button {
@@ -368,15 +368,10 @@ body {
 }
 .card .card-image__img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 6px;
-}
-.card .card-image__overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 .card .card-article {
   padding: 0 15px;
@@ -410,8 +405,12 @@ body {
   height: 62%;
   margin: 0;
 }
-.card:first-of-type .card-image__overlay {
-  background: linear-gradient(360deg, white 4%, rgba(255, 255, 255, 0) 25%);
+.card:first-of-type .card-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%, white);
 }
 .card:first-of-type .card-article__title {
   font-size: 34px;
@@ -428,38 +427,46 @@ body {
 .card:not(:first-of-type) {
   height: 300px;
 }
-.card:nth-child(n + 2) .card-image {
+.card:nth-child(n+2) .card-image {
   position: relative;
-  height: 42%;
+  height: 44%;
   margin: 0;
 }
-.card:nth-child(n + 2) .card-image__overlay {
-  background: linear-gradient(360deg, white 4%, rgba(255, 255, 255, 0) 25%);
+.card:nth-child(n+2) .card-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%, white 95%);
 }
-.card:nth-child(n + 6) {
+.card:nth-child(n+6) {
   display: flex;
   grid-column: span 2;
 }
-.card:nth-child(n + 6) .card-image {
+.card:nth-child(n+6) .card-image {
   position: relative;
   width: 45%;
   height: 100%;
   margin: 0;
 }
-.card:nth-child(n + 6) .card-image__overlay {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 80%, white 100%);
+.card:nth-child(n+6) .card-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 85%, white);
 }
-.card:nth-child(n + 6) .card-article {
+.card:nth-child(n+6) .card-article {
   flex-grow: 1;
   width: 50%;
   margin-top: 15px;
 }
-.card:nth-child(n + 6) .card-article__title {
+.card:nth-child(n+6) .card-article__title {
   margin: 0;
   font-size: 34px;
   line-height: 45px;
 }
-.card:nth-child(n + 6) .card-article__text {
+.card:nth-child(n+6) .card-article__text {
   display: -webkit-box;
   overflow: hidden;
   margin: 0;
@@ -479,16 +486,12 @@ body {
     width: 40% !important;
     height: 100% !important;
   }
-  .card .card-image__img {
+  .card .card-image::before {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    margin: 0;
-    border-radius: 6px;
-  }
-  .card .card-image__overlay {
-    position: absolute;
-    border-radius: 6px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 80%, #ffffff 100%) !important;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 80%, white) !important;
   }
   .card .card-article {
     flex-grow: 1;
@@ -521,9 +524,6 @@ body {
     width: 100% !important;
     height: 42% !important;
     margin: 0;
-  }
-  .card .card-image__overlay {
-    background: linear-gradient(360deg, #ffffff 4%, rgba(255, 255, 255, 0) 30%) !important;
   }
   .card .card-article {
     width: 90% !important;
@@ -735,7 +735,7 @@ body {
   padding-left: 50px;
   border: none;
   border-radius: 29px;
-  background: url('../../imgs/search.svg') no-repeat 10px;
+  background: url("../../imgs/search.svg") no-repeat 10px;
   box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.25);
 }
 .topnav__searchbar:focus {
