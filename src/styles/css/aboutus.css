@@ -640,6 +640,16 @@ body {
   min-width: 240px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .header {
   box-sizing: border-box;
   height: 96px;
