@@ -2,11 +2,12 @@
 
 .sr-only {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
+
   padding: 0;
   border: 0;
-  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -77,6 +78,55 @@
   }
 }
 
+.burger {
+  position: relative;
+  display: none;
+  height: 38px;
+  margin-left: 10px;
+  transition: 0.3s ease;
+
+  &__label {
+    cursor: pointer;
+  }
+  &:hover &__line {
+    box-shadow: $box-shadow-default;
+  }
+  &__line {
+    width: 35px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: $font-default;
+    box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked + &__label {
+    transform: translate(-50%, -50%) rotatey(180deg);
+    .burger__line {
+      transform: rotatey(180deg) rotatex(360deg);
+      &:first-child {
+        margin-top: 15px;
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        margin-top: -20px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__menu {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .header-logo__link {
     margin-left: 1%;
@@ -89,5 +139,38 @@
 
   .topnav__link {
     display: none;
+  }
+
+  .burger {
+    .menu {
+      position: absolute;
+      max-height: 0;
+      border-radius: 5%;
+      background-color: $primary-default;
+      font-size: 0;
+      transition: 0.15s all;
+      transform: translate(-135px, 22px);
+
+      &__link {
+        line-height: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:visited {
+          text-decoration: none;
+        }
+      }
+    }
+    display: block;
+    &__checkbox:checked ~ .menu {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 150px;
+      max-height: 500px;
+      padding: 10px;
+      font-size: 15px;
+    }
   }
 }

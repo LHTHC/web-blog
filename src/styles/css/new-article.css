@@ -689,11 +689,11 @@ body {
 }
 .sr-only {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
   padding: 0;
   border: 0;
-  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -764,6 +764,54 @@ body {
   text-decoration: none;
 }
 
+.burger {
+  position: relative;
+  display: none;
+  height: 38px;
+  margin-left: 10px;
+  transition: 0.3s ease;
+}
+.burger__label {
+  cursor: pointer;
+}
+.burger:hover .burger__line {
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+.burger__line {
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #232323;
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+.burger__line:not(:first-child) {
+  margin-top: 10px;
+}
+.burger__checkbox {
+  display: none;
+}
+.burger__checkbox:checked + .burger__label {
+  transform: translate(-50%, -50%) rotatey(180deg);
+}
+.burger__checkbox:checked + .burger__label .burger__line {
+  transform: rotatey(180deg) rotatex(360deg);
+}
+.burger__checkbox:checked + .burger__label .burger__line:first-child {
+  margin-top: 15px;
+  transform: rotate(-45deg);
+}
+.burger__checkbox:checked + .burger__label .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.burger__checkbox:checked + .burger__label .burger__line:nth-child(3) {
+  margin-top: -20px;
+  transform: rotate(45deg);
+}
+.burger__menu {
+  display: none;
+}
+
 @media screen and (max-width: 1280px) {
   .header-logo__link {
     margin-left: 1%;
@@ -776,5 +824,37 @@ body {
 
   .topnav__link {
     display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  .burger .menu {
+    position: absolute;
+    max-height: 0;
+    border-radius: 5%;
+    background-color: #fffd00;
+    font-size: 0;
+    transition: 0.15s all;
+    transform: translate(-135px, 22px);
+  }
+  .burger .menu__link {
+    line-height: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .burger .menu__link:visited {
+    text-decoration: none;
+  }
+  .burger__checkbox:checked ~ .menu {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 150px;
+    max-height: 500px;
+    padding: 10px;
+    font-size: 15px;
   }
 }

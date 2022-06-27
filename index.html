@@ -17,10 +17,22 @@
       <div class="header-main-wrap">
         <div class="header-main">
           <nav class="topnav">
-            <label for="search" class="sr-only">Поиск по сайту</label>
             <input type="text" id="search" class="topnav__searchbar" placeholder="Search..." />
+            <label for="search" class="sr-only">Поиск по сайту</label>
             <a class="topnav__link" href="./src/html/new-article-modal.html">Добавить Статью</a>
             <a class="topnav__link" href="./src/html/aboutus.html">Об авторе</a>
+            <div class="burger">
+              <input type="checkbox" id="burger" class="burger__checkbox" />
+              <label for="burger" class="burger__label">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+              </label>
+              <nav class="menu">
+                <a class="menu__link" href="./src/html/aboutus.html">Об авторе</a>
+                <a class="menu__link" href="./src/html/new-article-modal.html">Добавить cтатью</a>
+              </nav>
+            </div>
           </nav>
         </div>
       </div>
