@@ -556,10 +556,9 @@ body {
 }
 
 .main-wrap {
-  max-width: 98%;
+  max-width: 1185px;
   margin: 0 auto;
-  padding: 40px 0px 40px;
-  border-radius: 6px;
+  padding: 20px 0px;
 }
 
 .about-us-image {
@@ -651,7 +650,21 @@ body {
   min-width: 240px;
 }
 
+@media screen and (max-width: 1180px) {
+  .main-wrap {
+    margin: 0 1%;
+  }
+}
 @media screen and (max-width: 1024px) {
+  .main-wrap {
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us-image__img {
+    border-radius: 0;
+  }
+
   .about-us-advantages {
     flex-direction: column;
   }
@@ -679,6 +692,10 @@ body {
     gap: 20px;
     padding: 0;
     font-size: 20px;
+  }
+
+  .advantages-columns-wrap {
+    border-radius: 0;
   }
 
   .advantages-columns {

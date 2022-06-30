@@ -6,8 +6,7 @@
   @include main-defaults($white, $background-default);
 }
 .main-wrap {
-  @include main-wrap-defaults($max-width: 98%);
-  border-radius: 6px;
+  @include main-wrap-defaults;
 }
 
 .about-us-image {
@@ -97,7 +96,24 @@
   }
 }
 
+@media screen and (max-width: 1180px) {
+  .main-wrap {
+    margin: 0 1%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .main-wrap {
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us-image {
+    &__img {
+      border-radius: 0;
+    }
+  }
+
   .about-us-advantages {
     flex-direction: column;
     &__image {
@@ -126,6 +142,10 @@
       padding: 0;
       font-size: 20px;
     }
+  }
+
+  .advantages-columns-wrap {
+    border-radius: 0;
   }
 
   .advantages-columns {
