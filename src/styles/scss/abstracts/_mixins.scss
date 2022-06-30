@@ -1,4 +1,5 @@
 @mixin main-defaults($color, $background) {
+  overflow: hidden;
   background-color: $background;
   color: $color;
 }

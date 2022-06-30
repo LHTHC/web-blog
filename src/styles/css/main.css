@@ -550,6 +550,7 @@ body {
   }
 }
 .main {
+  overflow: hidden;
   background-color: #e5e5e5;
   color: #232323;
 }
