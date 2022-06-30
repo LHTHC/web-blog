@@ -110,17 +110,16 @@
 
 @media screen and (max-width: 970px) {
   .form {
-    height: 550px;
+    height: 850px;
     margin: 0 2%;
   }
 
   .article-textarea {
-    height: 35%;
+    height: 75%;
   }
 
   .form-buttons {
-    position: static;
-    margin-top: 5px;
+    margin-top: 30px;
   }
 
   .input-file::file-selector-button {
