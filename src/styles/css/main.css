@@ -657,20 +657,22 @@ body {
   line-height: 25px;
   text-align: center;
 }
-.counter__plus:hover {
-  background-color: #7cf253;
-  color: #232323;
-  cursor: pointer;
-}
 .counter__minus {
   color: #ff9494;
 }
-.counter__minus:hover {
-  background-color: #ff9494;
-  color: #232323;
-  cursor: pointer;
-}
 
+@media (hover: hover) {
+  .counter__plus:hover {
+    background-color: #7cf253;
+    color: #232323;
+    cursor: pointer;
+  }
+  .counter__minus:hover {
+    background-color: #ff9494;
+    color: #232323;
+    cursor: pointer;
+  }
+}
 @media screen and (max-width: 560px) {
   .counter {
     right: 15px;

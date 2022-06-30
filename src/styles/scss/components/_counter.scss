@@ -29,16 +29,21 @@
     line-height: 25px;
     text-align: center;
   }
-  &__plus {
-    &:hover {
-      background-color: $system-success;
-      color: $font-default;
-      cursor: pointer;
-    }
-  }
   &__minus {
     color: $system-fail;
-    &:hover {
+  }
+}
+
+@media (hover: hover) {
+  .counter {
+    &__plus {
+      &:hover {
+        background-color: $system-success;
+        color: $font-default;
+        cursor: pointer;
+      }
+    }
+    &__minus:hover {
       background-color: $system-fail;
       color: $font-default;
       cursor: pointer;
